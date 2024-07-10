@@ -10,9 +10,8 @@
 	
 	<div class="position-absolute top-50 start-50 translate-middle">
 
-
-		<button  id = "btn" onclick="counter()" type="button" class="btn btn-success">Блять, задрочи эту кнопку как можно больше раз, умоляю!!!</button>
-		<h4 id = "text">Осталось кликнуть на кнопку выше для получения подарка: 0/100</h4>
+        <h4 id = "text">Для начала кликни на кнопку 100 раз. Настя бы так смогла</h4>
+		<button  id = "btn" onclick="counter()" type="button" class="btn btn-success">Жмякать сюда</button>
 
 	</div>
       	
@@ -32,10 +31,10 @@
      			
 
      			if(count >= 100 && count < 250){
-     				btn.innerHTML = "ЖМИ СУКА ЖМИ ДАВАЙ ЖМИ ЖМИ ЖМИ ЖМИ"
-     				element.innerHTML = 'Упс, ошибка вышла, кликни 250 раз, и тогда точно будет подарок: ' + ++count + '/250'
+     				btn.innerHTML = "ЖМИ ЖМИ ЖМИ ЖМИ "
+     				element.innerHTML = 'Чтобы наверняка, кликни 250 раз, и тогда точно будет подарок: ' + ++count + '/250'
      			}else if(count < 100){
-     				element.innerHTML = 'Осталось кликнуть на кнопку выше для получения подарка: ' + ++count + '/100'
+     				element.innerHTML = 'Осталось кликнуть на кнопку для получения подарка: ' + ++count + '/100'
      			}else{
      				window.location.href = "lvl6.html";
      			}

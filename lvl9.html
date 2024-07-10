@@ -9,14 +9,123 @@
 <body>
 	<div class="position-absolute top-50 start-50 translate-middle">
 
-		<h4>Это правда! Вот твоё поздравление:</h4>
-		<img src="birthday.jpg" alt="Aleq" width="330" height="330"/>
+		<h4 id = "text">Это правда! А теперь пройди небольшой тест и после этого точно-точно получишь подарок!</h4>
+		<form>
+ 		 <p>Какой вариант ответа тебя НЕ описывает?<br>
+ 		   <label>
+ 		     <input type="radio" name="myname" value="0">
+ 		     Консервативный пидорас</label>
+ 		   <br>
+ 		   <label>
+ 		     <input type="radio" name="myname" class = "right_1" value="0">
+ 		     Девочка-припевочка</label>
+ 		   <br>
+ 		   <label>
+ 		     <input type="radio" name="myname" value="1">
+ 		     Лесной отшельник</label>
+ 		   <br>
+ 		   <label>
+ 		     <input type="radio" name="myname" value="0">
+ 		     Ворчащая бабка у подъезда</label>
+ 		 </p>
+		</form>
+ 		 <form>
+ 		 <p>Чтобы на свидании тебя заинтересовать, девушка должна быть:<br>
+ 		   <label>
+ 		     <input type="radio" name="myname" value="0">
+ 		     Художницей</label>
+ 		   <br>
+ 		   <label>
+ 		     <input type="radio" name="myname" value="0">
+ 		     Актрисой</label>
+ 		   <br>
+ 		   <label>
+ 		     <input type="radio" name="myname" class = "right_1" value="1">
+ 		     Хотя бы не тупой</label>
+ 		   <br>
+ 		   <label>
+ 		     <input type="radio" name="myname" value="0">
+ 		     Радикальной феминисткой</label>
+ 		 </p>
+		</form>
+		<form>
+ 		 <p>Какого члена семьи ты любишь особой, сильной и неописуемой любовью?<br>
+ 		   <label>
+ 		     <input type="radio" name="myname"value="1">
+ 		     Щедрого брата</label>
+ 		   <br>
+ 		   <label>
+ 		     <input type="radio" name="myname" value="0">
+ 		     А кот член семьи?</label>
+ 		   <br>
+ 		   <label>
+ 		     <input type="radio" name="myname" class = "right_1"  value="0">
+ 		     Долгоживущую бабушку</label>
+ 		     <br>
+ 		   <label>
+ 		     <input type="radio" name="myname" value="0">
+ 		     Ну растения же точно члены семьи, да?</label>
+ 		   <br>
+ 		 </p>
+		</form>
+
+		<form>
+ 		 <p>Что из этого правда?<br>
+ 		   <label>
+ 		     <input type="radio" name="myname"value="1">
+ 		     Правительство тайно распыляет с пассажирских самолётов химикаты</label>
+ 		   <br>
+ 		   <label>
+ 		     <input type="radio" name="myname" value="0">
+ 		     СССР не распался, а РФ — ненастоящее государство</label>
+ 		   <br>
+ 		   <label>
+ 		     <input type="radio" name="myname" value="0">
+ 		     Depo Computers хорошая компания</label>
+
+ 		   <br>
+ 		   <label>
+ 		     <input type="radio" name="myname" class = "right_1"  value="0">
+ 		     У тебя есть вторая личность, у которой есть муж</label>
+ 		 </p>
+		</form>
+ 		 <br>
+ 		 <p>
+ 		   <input type="button" id="calc" value="Проверить ответы">
+ 		   <input type="reset" value="Сброс">
+ 		 </p>
 	</div>
-      	
+     <script>
+     	calc.onclick = function(){
+     		var arr = document.getElementsByClassName("right_1")
+     		var res = 0;
+     		console.log(arr)
+     		for (var i = arr.length - 1; i >= 0; i--) {
+     			console.log(arr[i].checked + " " + i)
+     			if(arr[i].checked){
+     				res++
+     			}
+     		}
+     		if(res >= arr.length){
+     			window.location.href = "lvlEnd.html";
+     		}else{
+     			document.getElementById("text").innerHTML = "НЕПРАВИЛЬНО! Ты обманываешь меня или себя?"
+     		}
+    	/*if(document.getElementsByTagName("right_1").checked){
+    		console.log("Right")
+    	}else{
+    		console.log("Unright")
+    	}*/
+    	//myform.result.value = +myform.myname.value //+ +myform.street.value;
+    	
+		}
+     </script>
         <!-- <label for="formGroupExampleInput">Example label</label>
         <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input"> -->
 
      
+
+
         <!-- <label for="formGroupExampleInput2">Another label</label>
         <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input"> -->
      

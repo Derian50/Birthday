@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="position-absolute top-50 start-50 translate-middle">
-        <h4 id = "text">Извини, но нужно сначала убедиться, что ты точно Ира, у которой день рождения. Введи свой номер, чтобы наверняка:</h4>
+        <h4 id = "text">Так, не, фигня какая-то, нужно стопроцентно убедиться, что ты точно Настя, у которой день рождения. Введи свой номер, чтобы наверняка:</h4>
         <div class="form-group">
              
              <span id = "0" class="border">0</span>
@@ -37,7 +37,7 @@
                 document.getElementById(elementCount).innerHTML = number++
                 if(number >= 10) number = 0
             }
-            ,300)
+            ,500)
             function stop(){
                 elementCount++
                 number = 0
@@ -57,7 +57,7 @@
                 }
                 var result = Number(arr.join(''));
                 
-                if(result == 79156846247 || result == 79509011559){
+                if(result == 79661908604){
                     window.location.href = "lvl7.html";
                 }else{
                     document.getElementById("text").innerHTML = "Не обманывай меня, пожалуйста. Подумай ещё раз. Или ты не хочешь получить подарок?"
